@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dvarabell — Ring the Bell</title>
+  <meta name="description" content="Dare to ring the bell? A mysterious door awaits... if you're brave enough." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Ambient floating particles -->
+  <div class="particles" aria-hidden="true" id="particles"></div>
+
+  <!-- Fog overlay -->
+  <div class="fog" aria-hidden="true"></div>
+
+  <!-- Main Scene -->
+  <main class="scene" id="scene">
+
+    <!-- Title -->
+    <header class="header">
+      <h1 class="title">🔔 Dvarabell</h1>
+      <p class="subtitle">Someone is waiting behind the door...</p>
+    </header>
+
+    <!-- Doorway wrapper -->
+    <div class="doorway" id="doorway" aria-label="Mysterious door">
+      <!-- Wall frame -->
+      <div class="wall-frame">
+        <div class="frame-top"></div>
+        <div class="frame-side frame-left"></div>
+        <div class="frame-side frame-right"></div>
+
+        <!-- 3D Door perspective container -->
+        <div class="door-perspective" id="doorPerspective">
+          <!-- Door panels -->
+          <div class="door" id="door">
+            <!-- Door surface details -->
+            <div class="door-panel top-panel"></div>
+            <div class="door-panel bottom-panel"></div>
+            <div class="door-knob" id="doorKnob" aria-hidden="true"></div>
+            <div class="door-peephole" aria-hidden="true"></div>
+            <div class="door-nameplate" aria-hidden="true">
+              <span>🔔</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dark void behind door -->
+        <div class="door-void" id="doorVoid" aria-hidden="true">
+          <div class="void-glow"></div>
+        </div>
+      </div>
+
+      <!-- Doorstep -->
+      <div class="doorstep" aria-hidden="true"></div>
+    </div>
+
+    <!-- Bell button -->
+    <div class="bell-container">
+      <button
+        class="bell-btn"
+        id="bellBtn"
+        aria-label="Ring the doorbell"
+        title="Ring the doorbell!"
+      >
+        <span class="bell-icon" id="bellIcon">🔔</span>
+        <span class="bell-text">Ring the Bell</span>
+        <span class="btn-ripple" id="btnRipple"></span>
+      </button>
+      <p class="dare-text" id="dareText">Do you dare?</p>
+    </div>
+
+  </main>
+
+  <!-- Jumpscare Overlay -->
+  <div class="jumpscare-overlay" id="jumpscareOverlay" role="alert" aria-live="assertive" aria-hidden="true">
+    <div class="jumpscare-content">
+      <img
+        src="jumpscare.png"
+        alt="AAAHHH!"
+        class="jumpscare-img"
+        id="jumpscareImg"
+        draggable="false"
+      />
+      <div class="static-overlay" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- Reset button (shown after scare) -->
+  <div class="reset-container" id="resetContainer" aria-hidden="true">
+    <button class="reset-btn" id="resetBtn" aria-label="Try again">
+      Try Again... if you dare 😈
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
