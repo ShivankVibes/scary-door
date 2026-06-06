@@ -1,77 +1,77 @@
 # 🔔 Dvarabell — The Door
 
-> *Someone is waiting behind the door... do you dare ring the bell?*
+**Someone is standing behind the door. The question is: will you ring the bell?**
 
-A horror-themed interactive web experience built with pure HTML, CSS, and JavaScript. Click the bell button, watch the door swing open, and face whatever lurks inside.
+Dvarabell is a small horror-themed web experience built with nothing but HTML, CSS, and JavaScript. What starts as a simple doorbell quickly turns into something much less welcoming. Ring the bell, watch the door slowly open, and discover what's waiting on the other side.
 
----
+## What Happens?
 
-## 👁️ Features
+* Ring the doorbell and hear it chime using the Web Audio API.
+* Watch the door swing open with a smooth 3D animation.
+* Experience atmospheric horror effects including fog, floating particles, screen shake, and unsettling sounds.
+* Face a sudden jumpscare hidden behind the door.
+* Hit **Try Again** if you're brave enough for another round.
 
-- 🚪 **3D animated door** — swings open using CSS perspective transforms
-- 🔔 **Working doorbell** — synthesized bell tones via the Web Audio API
-- 😱 **Jumpscare** — full-screen horror face with zoom-in animation and red flash
-- 📳 **Screen shake** — triggers just before the scare hits
-- 🎵 **Horror soundscape** — creaking door, dissonant chord, and low rumble, all synthesized (no audio files)
-- 🌫️ **Atmospheric effects** — animated fog, floating blood particles, glowing title
-- 🔁 **Reset flow** — "Try Again" button to repeat the experience
-- ♿ **Accessible** — ARIA labels, keyboard support (`Space`/`Enter` to ring, `Esc` to dismiss)
+## Features
 
----
+* 🚪 Animated 3D door with realistic opening effects
+* 🔔 Functional doorbell with synthesized audio
+* 😱 Full-screen jumpscare with flash and zoom effects
+* 📳 Screen shake for extra tension
+* 🎵 Custom-generated horror sounds — no audio files required
+* 🌫️ Fog, particles, and glowing visual effects
+* 🔁 Easy reset and replay
+* ♿ Keyboard and accessibility support
 
-## 🗂️ Project Structure
+## Project Structure
 
-```
-dvarabell-the DOOR/
-├── index.html       # Page structure & layout
-├── style.css        # All styling — horror theme, 3D door, animations
-├── script.js        # Interaction logic & Web Audio sound synthesis
-├── jumpscare.png    # The face behind the door 👁️
-└── README.md        # You are here
-```
-
----
-
-## 🚀 Running Locally
-
-No build step needed — it's plain HTML/CSS/JS.
-
-**Option 1 — Open directly:**
-```
-Just double-click index.html in Finder
+```text
+dvarabell-the-door/
+├── index.html
+├── style.css
+├── script.js
+├── jumpscare.png
+└── README.md
 ```
 
-**Option 2 — Serve locally (recommended for audio to work properly):**
+## Running the Project
+
+No installation or build tools are required.
+
+### Open Directly
+
+Simply open `index.html` in your browser.
+
+### Run a Local Server (Recommended)
+
 ```bash
 npx serve .
 ```
-Then open `http://localhost:3000` in your browser.
 
-> ⚠️ **Audio Note:** Browsers block audio until the user interacts with the page. Clicking the bell button counts as the first interaction, so sound works automatically.
+Then visit:
 
----
+```text
+http://localhost:3000
+```
 
-## 🛠️ Tech Stack
+Some browsers handle Web Audio more reliably when served through a local server.
 
-| Technology | Usage |
-|---|---|
-| HTML5 | Semantic structure, ARIA accessibility |
-| CSS3 | 3D transforms, keyframe animations, glassmorphism effects |
-| Vanilla JavaScript | Interaction logic, animation sequencing |
-| Web Audio API | Bell, creak, and horror scream — no audio files needed |
-| Google Fonts | *Creepster* (title) + *Inter* (body) |
+## Built With
 
----
+| Technology    | Purpose                             |
+| ------------- | ----------------------------------- |
+| HTML5         | Structure and accessibility         |
+| CSS3          | Styling, animations, and 3D effects |
+| JavaScript    | Interaction and game logic          |
+| Web Audio API | Generated sound effects             |
+| Google Fonts  | Horror-themed typography            |
 
-## 🎨 Design
+## Design Notes
 
-- **Color palette:** Deep stone grays, blood reds, and warm gold accents
-- **Typography:** Creepster for the horror title, Inter for UI text
-- **Animations:** CSS `perspective` + `rotateY` for the door, `@keyframes` for shake/flash/zoom
-- **Particles:** 35 floating ember particles generated dynamically in JS
+Dvarabell uses a dark, horror-inspired visual style built around deep grays, blood-red accents, and eerie lighting effects. The goal was to create a complete horror experience without relying on external libraries, frameworks, or audio files.
 
----
+## License
 
-## 📄 License
+This project was created for fun and experimentation.
 
-Made for fun. Do whatever you want with it. 👻
+Feel free to use it, modify it, or build something even creepier with it. 👻
